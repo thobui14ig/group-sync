@@ -21,7 +21,7 @@ services:
     depends_on:
       - redis
     environment:
-      - PORT=7000
+      - PORT=9000
       - DB_TYPE=mysql
       - DB_HOST=91.99.31.157
       - DB_PORT=3306
@@ -34,7 +34,7 @@ services:
       - REDIS_PORT=6379
       - REDIS_TYPE=single
     ports:
-      - '7000:7000'
+      - '9000:9000'
 
   redis:
     image: redis:latest

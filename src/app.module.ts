@@ -17,10 +17,10 @@ import { PostControllerModule } from './controller/post/post.controller.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '91.99.31.157',
+      host: '160.25.232.64',
       port: 5432,
       username: 'root',
-      password: '111111',
+      password: 'Thobui1996@',
       database: 'group-sync',
       entities: [GroupEntity, UserEntity, ProxyEntity],
       synchronize: true,

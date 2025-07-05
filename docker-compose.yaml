@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=111111
+      - POSTGRES_PASSWORD=Thobui1996@
       - POSTGRES_DB=group-sync
     volumes:
       - postgres-volume:/var/lib/postgresql/data

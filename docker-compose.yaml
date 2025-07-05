@@ -31,7 +31,7 @@ services:
       - NODE_OPTIONS=--max-old-space-size=4096
       # redis
       - REDIS_HOST=redis
-      - REDIS_PORT=6380
+      - REDIS_PORT=6379
       - REDIS_TYPE=single
     ports:
       - '9000:9000'

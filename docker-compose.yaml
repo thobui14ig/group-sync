@@ -38,7 +38,7 @@ services:
 
   redis:
     image: redis:latest
-    container_name: my-redis
+    container_name: redis-group
     ports:
       - '6379:6379'
     volumes:

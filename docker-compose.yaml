@@ -23,11 +23,11 @@ services:
     environment:
       - PORT=9000
       - DB_TYPE=mysql
-      - DB_HOST=91.99.31.157
+      - DB_HOST=160.25.232.64
       - DB_PORT=3306
       - DB_USER_NAME=root
       - DB_PASSWORD=HoangChuong@1111
-      - DB_DATABASE=crawl-fb
+      - DB_DATABASE=group-sync
       - NODE_OPTIONS=--max-old-space-size=4096
       # redis
       - REDIS_HOST=redis

@@ -17,7 +17,7 @@ import { PostControllerModule } from './controller/post/post.controller.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: '91.99.31.157',
       port: 5432,
       username: 'root',
       password: '111111',

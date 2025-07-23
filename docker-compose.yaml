@@ -21,13 +21,13 @@ services:
     depends_on:
       - postgres
     environment:
-      - PORT=9000
+      - PORT=10000
       - DB_TYPE=mysql
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_USER_NAME=root
-      - DB_PASSWORD=Thobui1996@
-      - DB_DATABASE=group-sync
+      - DB_USER=root
+      - DB_PASS=Thobui1996@
+      - DB_NAME=group-sync
       - NODE_OPTIONS=--max-old-space-size=4096
     ports:
       - '10000:10000'

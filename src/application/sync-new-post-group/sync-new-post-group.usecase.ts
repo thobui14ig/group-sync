@@ -4,7 +4,6 @@ import * as dayjs from 'dayjs';
 import * as utc from 'dayjs/plugin/utc';
 import fetch from 'node-fetch';
 import { delay, getHttpAgent } from 'src/common/helper';
-import { RedisService } from 'src/infrastructure/common/redis/redis.service';
 import { ProxyEntity, ProxyStatus } from 'src/infrastructure/entity/proxy.entity';
 import { GroupRepository } from 'src/infrastructure/repository/user/group.repository';
 import { ProxyRepository } from 'src/infrastructure/repository/user/proxy.repository';
@@ -36,9 +35,7 @@ export class SyncNewPostGroupUseCase {
 
     constructor(
         private readonly gateway: AppGateway,
-        private readonly proxyRepository: ProxyRepository,
         private readonly groupRepository: GroupRepository,
-        private readonly redisService: RedisService,
         private readonly httpService: HttpService
     ) {
         this.proxy = this.proxyDefault1

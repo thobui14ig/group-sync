@@ -3,9 +3,10 @@ import { SyncNewPostGroupUseCaseModule } from 'src/application/sync-new-post-gro
 import { CronjobController } from './cronjob.controller';
 import { CheckLiveProxyUseCaseModule } from 'src/application/check-live-proxy/check-live-proxy-useacse.module';
 import { GetRandomProxyLiveUseCaseModule } from 'src/application/get-random-proxy-live/get-random-proxy-live-usecase.module';
+import { RotateProxyUseCaseModule } from 'src/application/rotate-proxy/rotate-proxy-usecase.module';
 
 @Module({
-    imports: [SyncNewPostGroupUseCaseModule, CheckLiveProxyUseCaseModule, GetRandomProxyLiveUseCaseModule],
+    imports: [SyncNewPostGroupUseCaseModule, CheckLiveProxyUseCaseModule, GetRandomProxyLiveUseCaseModule, RotateProxyUseCaseModule],
     controllers: [CronjobController],
     providers: [],
 })

@@ -27,12 +27,12 @@ export class CheckLiveProxyUseCase {
             };
             proxy_check(config).then(async (res) => {
                 if (res) {
-                    // const isBlock = await this.check(proxy)
+                    const isBlock = await this.check(proxy)
 
-                    // if (isBlock) {
-                    //     proxy.status = ProxyStatus.IN_ACTIVE
-                    //     return this.proxyRepository.update(proxy)
-                    // }
+                    if (isBlock) {
+                        proxy.status = ProxyStatus.IN_ACTIVE
+                        return this.proxyRepository.update(proxy)
+                    }
 
                     proxy.status = ProxyStatus.ACTIVE
                     return this.proxyRepository.update(proxy)
@@ -86,7 +86,6 @@ export class CheckLiveProxyUseCase {
                     if (typeof text === 'string') {
                         const lines = text.trim().split('\n');
                         const dataJson = JSON.parse(lines[0])
-                        console.log("🚀 ~ CheckLiveProxyUseCase ~ .then ~ dataJson?.errors:", dataJson?.errors)
 
                         if (dataJson?.errors?.[0]?.code === 1675004) {
                             return true

@@ -3,6 +3,7 @@ import { ProxyEntity } from "src/infrastructure/entity/proxy.entity";
 
 function getHttpAgent(proxy: ProxyEntity) {
     const proxyArr = proxy.value.split(':')
+    // 
     const agent = `http://${proxyArr[2]}:${proxyArr[3]}@${proxyArr[0]}:${proxyArr[1]}`
     const httpsAgent = new HttpsProxyAgent(agent);
 

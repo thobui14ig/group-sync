@@ -1,0 +1,36 @@
+{
+    "id": "66724c196a432318c00dd96f",
+    "top_level_post_id": "3706733849549151",
+    "actrs": "61559099554926",
+    "phone": "",
+    "title": "Nhà Kibu",
+    "num_post": 32,
+    "report": 5,
+    "report_phone": 0,
+    "desc": "nhận 16 hoàng dư khương  đi 90 Nguyễn Chí Thanh, 177 Phan Châu trinh  ship 30 ứng 135",
+    "group_id": "1390167227872503",
+    "area": "DA_NANG",
+    "time": 0,
+    "source": "Facebook",
+    "source_url": "https://www.facebook.com/groups/1390167227872503/posts/3706733849549151",
+    "source_actrs_url": "https://m.me/61559099554926",
+    "ship_order": {
+        "top_level_post_id": "3706733849549151",
+        "area": "DA_NANG",
+        "fee": "30k",
+        "ad_cash": "135k",
+        "distance": 5891,
+        "distance_and_duration": "5,9 km - 15 phút",
+        "duration": 909,
+        "pick_up": "16 Hoàng Dư Khương, Khuê Trung, Cẩm Lệ, Đà Nẵng 550000, Việt Nam",
+        "pick_up_geo": {
+            "lat": 16.0272792,
+            "lng": 108.2130753
+        },
+        "drop_off": "90 Nguyễn Chí Thanh, Hải Châu 1, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "image_map_url": "cdn.gojo.vn/image-cdn/maps/3706733849549151.jpg",
+        "static_maps_url": ""
+    },
+    "created_at": "2024-06-19T10:10:17.831347729+07:00",
+    "distance": "7.4"
+}

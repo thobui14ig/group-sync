@@ -9,7 +9,8 @@ async function bootstrap() {
     origin: true,
     credentials: true,
   });
-  // const configService = app.get(ConfigService);
-  await app.listen(9000);
+  const configService = app.get(ConfigService);
+  const port = configService.get<number>('PORT', 10000);
+  await app.listen(port);
 }
 bootstrap();

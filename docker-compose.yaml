@@ -19,7 +19,7 @@ services:
     container_name: group-sync
     restart: always
     depends_on:
-      - redis
+      - postgres
     environment:
       - PORT=9000
       - DB_TYPE=mysql
@@ -29,23 +29,9 @@ services:
       - DB_PASSWORD=Thobui1996@
       - DB_DATABASE=group-sync
       - NODE_OPTIONS=--max-old-space-size=4096
-      # redis
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - REDIS_TYPE=single
     ports:
-      - '9000:9000'
-
-  redis:
-    image: redis:latest
-    container_name: redis-group
-    ports:
-      - '6380:6379'
-    volumes:
-      - redis-data:/data
-    restart: unless-stopped
+      - '10000:10000'
 
 volumes:
-  redis-data:
   postgres-volume:
     driver: local

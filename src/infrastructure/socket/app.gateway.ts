@@ -46,11 +46,12 @@ export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGateway
   }
 
   async receiveMessage(payload: Message) {
+    const isExist = this.posts.find(item => item.postId === payload.postId)
+    if (isExist) return
     void this.server.emit('postMessage', payload);
     if (this.posts.length === 30) {
-      this.posts.pop
+      this.posts.pop()
     }
     this.posts.unshift(payload);
-    this.posts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
   }
 }

@@ -83,7 +83,7 @@ export class SyncNewPostGroupUseCase {
                         "sec-fetch-user": "?1",
                         "upgrade-insecure-requests": "1",
                         "viewport-width": "860",
-                        "cookie": "sb=IpN2Z63pdgaswLIv6HwTPQe2; ps_l=1; ps_n=1; vpd=v1%3B896x414x2; datr=VbQ5aIRhuL3sZgH-YD17GNjn; wl_cbv=v2%3Bclient_version%3A2856%3Btimestamp%3A1751184877; locale=vi_VN; m_pixel_ratio=2; dpr=1.100000023841858; c_user=100018203168307; i_user=61578848633136; fr=1hZBgwkwPBvSXrzsx.AWc3L-TVmzgSrjB-gJ4wwL2GxfJuPboU81IkB_Xze_jiSUSYLEA.BogK8Z..AAA.0.0.BogK8Z.AWf82Ly3Afo7Yh0lsZjebqMecDw; xs=42%3ABdW4Aoqw-18uaQ%3A2%3A1753262224%3A-1%3A-1%3A%3AAcVYS8o0xbplVxcb8eYjF6tftHHCkaOqrdICVqGbNA; wd=860x866"
+                        "cookie": "sb=IpN2Z63pdgaswLIv6HwTPQe2; ps_l=1; ps_n=1; vpd=v1%3B896x414x2; datr=VbQ5aIRhuL3sZgH-YD17GNjn; wl_cbv=v2%3Bclient_version%3A2856%3Btimestamp%3A1751184877; locale=vi_VN; dpr=1.100000023841858; c_user=100018203168307; xs=10%3AeWkoS-e2duXVmA%3A2%3A1753277536%3A-1%3A-1; i_user=61578848633136; fr=1AfYpqVea1at6HAOV.AWcv_29zwGp4QPLv58mw5I2C3SU-LfoO-TB98HpJvX5r2_SxQ2c.BogJHJ..AAA.0.0.BogORu.AWegUVnI6inLbUGY3UYU71w553Y; wd=860x866"
                     },
                     "body": null,
                     "method": "GET"
@@ -156,12 +156,7 @@ export class SyncNewPostGroupUseCase {
                         // }
                     })
                     .catch(async (error) => {
-                        if (this.proxy.id == -1) {
-                            this.proxy = this.proxyDefault2
-                        } else {
-                            this.proxy = this.proxyDefault1
-                        }
-
+                        console.log("🚀 ~ SyncNewPostGroupUseCase ~ crawlPublic ~ error:", error?.message)
                     });
             } catch (error) { } finally {
                 await delay(20000)

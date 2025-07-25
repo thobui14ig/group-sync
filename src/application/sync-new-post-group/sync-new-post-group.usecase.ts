@@ -63,7 +63,7 @@ export class SyncNewPostGroupUseCase {
                 // if (!proxy) continue;
                 const httpsAgent = getHttpAgent(this.proxy)
 
-                await fetch(`https://graph.facebook.com/${groupId}/feed?limit=10&&fields=id,created_time,updated_time,message&access_token=EAADo1TDZCuu8BPEGvpBNgq7ppjXObsyQqn8LbBZCKMFUBUNDOxKl96R4zrD0goINIuhgpd0jSLZAch101ywZCmUto5KBRk7EckiBk2cdMRL0n41r5CmXxNZCZBQuXaOsFornSXBsyvc4eFyEblBTIKaE9biwylOMMxERtfBeiSVH9VdWGhons9iQPK4YZAF5AZDZD`, {
+                await fetch(`https://graph.facebook.com/${groupId}/feed?limit=10&&fields=id,created_time,updated_time,message&access_token=EAAGNO4a7r2wBPO3DsFlp6DqEyxfjZBCfAaJrZBiSdQ4vvmOLqv6gSL4X82nkCz78Tb9BMfxXCiCvlBZARZBW8WRMZB5Iaqyf9yOfe7aOPwRnAIkiZC6RJww0tIswYGJICTomSG6iKb3BS97eZCKv4arQ14WLJzZB086IrtuIZCGioKZCctzrE873xNdxfFtvJOwddrPgZDZD`, {
                     "headers": {
                         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
                         "accept-language": "vi,en-US;q=0.9,en;q=0.8",
@@ -92,7 +92,7 @@ export class SyncNewPostGroupUseCase {
                             actorName: 'No Name',
                             postId: latestPost?.id?.split('_')[1],
                             content: latestPost?.message,
-                            createdAt: dayjs(latestPost?.created_time).utc().format('YYYY-MM-DD HH:mm:ss'),
+                            createdAt: dayjs().utc().format('YYYY-MM-DD HH:mm:ss'),
                             groupId
                         }
                         const isRemove = this.remove(message.content)

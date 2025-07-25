@@ -63,7 +63,7 @@ export class SyncNewPostGroupUseCase {
                 // if (!proxy) continue;
                 const httpsAgent = getHttpAgent(this.proxy)
 
-                await fetch(`https://graph.facebook.com/${groupId}/feed?limit=10&&fields=id,created_time,updated_time,message&access_token=EAADo1TDZCuu8BPP9VEMs0kU3Ux9ZB8ZC9hJdlkLzcLbjkUy2IUZCxHcDzoq1OYNt7bZBWWSghjuZAD0DMVgNCkuS1MgISS3Y78ZC9Nu66BuzoPuoSnKD5hsRgkLUyX8sbp6PebwhEvZAm4mZBVEv4eFVSvRBarsv2Rcq68K5Lq7PvERFkwZAXleKQlWmwrg2OZCue04FwZDZD`, {
+                await fetch(`https://graph.facebook.com/${groupId}/feed?limit=10&&fields=id,created_time,updated_time,message&access_token=EAADo1TDZCuu8BPEGvpBNgq7ppjXObsyQqn8LbBZCKMFUBUNDOxKl96R4zrD0goINIuhgpd0jSLZAch101ywZCmUto5KBRk7EckiBk2cdMRL0n41r5CmXxNZCZBQuXaOsFornSXBsyvc4eFyEblBTIKaE9biwylOMMxERtfBeiSVH9VdWGhons9iQPK4YZAF5AZDZD`, {
                     "headers": {
                         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
                         "accept-language": "vi,en-US;q=0.9,en;q=0.8",
@@ -97,7 +97,7 @@ export class SyncNewPostGroupUseCase {
                         }
                         const isRemove = this.remove(message.content)
 
-                        if (isRemove) {
+                        if (isRemove || !message.content || !message.postId) {
                             return
                         }
                         console.log("🚀 ~ SyncNewPostGroupUseCase ~ .then ~ message:", message)

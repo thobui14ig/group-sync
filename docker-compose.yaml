@@ -19,5 +19,7 @@ services:
       - REDIS_HOST=103.67.196.23
       - REDIS_PORT=6379
       - REDIS_TYPE=single
+      - IP_SOCKET=103.67.196.23
+      - PORT_SOCKET=2000
     ports:
       - '8000:8000'

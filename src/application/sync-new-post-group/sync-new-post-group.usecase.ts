@@ -81,16 +81,18 @@ export class SyncNewPostGroupUseCase {
                                 console.log(dataJson?.errors)
                                 return null
                             }
-       
+                            const message = {
+                                actorId,
+                                actorName,
+                                postId,
+                                content,
+                                createdAt,
+                                groupId
+                            }    
+                            console.log(message)                                
+
                             if((content??"").length > 0 && !this.exclude(content)){
-                                const message = {
-                                    actorId,
-                                    actorName,
-                                    postId,
-                                    content,
-                                    createdAt,
-                                    groupId
-                                }
+
                                 console.log(message)                                
                             }
 

@@ -1,13 +1,12 @@
 import { Global, Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { UserEntity } from "../entity/user.entity";
-import { UserRepository } from "./user/user.repository";
-import { ProxyRepository } from "./user/proxy.repository";
 import { ProxyEntity } from "../entity/proxy.entity";
-import { GroupRepository } from "./user/group.repository";
+import { GroupRepository } from "./group.repository";
 import { GroupEntity } from "../entity/group.entity";
+import { ProxyRepository } from "./proxy.repository";
 
-const repositories = [UserRepository, ProxyRepository, GroupRepository]
+const repositories = [GroupRepository, ProxyRepository]
 @Global()
 @Module({
     imports: [TypeOrmModule.forFeature([UserEntity, ProxyEntity, GroupEntity])],

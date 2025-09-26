@@ -11,6 +11,6 @@ export class UserEntity {
     @Column({ type: 'text' })
     password: string;
 
-    @CreateDateColumn({ type: 'timestamptz', name: 'created_at' })
+    @CreateDateColumn({ name: 'created_at' })
     createdAt: Date;
 }

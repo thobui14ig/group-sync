@@ -10,7 +10,7 @@ export class ProxyEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'text' })
+    @Column({ name: 'proxy_address' })
     value: string;
 
     @Column({ type: 'enum', enum: ProxyStatus, default: ProxyStatus.ACTIVE })
